@@ -1,11 +1,18 @@
-let names = ["Likhith", "God", "Nishanth", "Shiba", "Lauda"];
+class CustomArray{
+    constructor(){
+        this.length = 0;
+        this.data = {};
+    };
 
-const findName = (allNames, studentName) => {
-    for(let i = 0; i < allNames.length; i++){
-        if(allNames[i] === studentName){
-            return allNames[i];
-        }
-    }
-};
+    push(item){
+        this.data[this.length] = item;
+        this.length++;
+        return this.length;
+    };
+} 
 
-console.log(findName(names, "God"));
+const newArr = new CustomArray();
+newArr.push("Shiba");
+newArr.push("Shiba1");
+newArr.push("Shiba2");
+console.log(newArr);
